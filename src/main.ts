@@ -28,7 +28,7 @@ async function bootstrap() {
         scheme: 'bearer',
         bearerFormat: 'JWT',
       },
-      process.env.JWT_AUTH_NAME
+      'JWT-Token'
     )
     .setBasePath('/api')
     .build()

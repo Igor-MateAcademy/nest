@@ -39,9 +39,9 @@ import { UserRole } from './enums/roles.enum'
 
 import { MongoIdPipe } from 'common/pipes/MongoIdPipe.pipe'
 
-@ApiBearerAuth(process.env.JWT_AUTH_NAME)
 @ApiTags('User')
 @Controller('user')
+@ApiBearerAuth('JWT-Token')
 export class UserController {
   constructor(private userService: UserService) {}
 

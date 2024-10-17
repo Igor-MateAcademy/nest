@@ -40,7 +40,7 @@ export class AuthService {
 
     if (!userByCredentials) throw new UnauthorizedException('Credentials are wrong')
 
-    const isPasswordMatched = await bcrypt.compare(userByCredentials.password, password)
+    const isPasswordMatched = await bcrypt.compare(password, userByCredentials.password)
 
     if (!isPasswordMatched) throw new UnauthorizedException('Wrong password')
 

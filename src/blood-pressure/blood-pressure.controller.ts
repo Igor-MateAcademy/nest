@@ -33,9 +33,9 @@ import { MongoIdPipe } from 'common/pipes/MongoIdPipe.pipe'
 
 import { MongoId } from 'models'
 
-@ApiBearerAuth(process.env.JWT_AUTH_NAME)
 @ApiTags('BloodPressure')
 @Controller('blood-pressure')
+@ApiBearerAuth('JWT-Token')
 export class BloodPressureController {
   constructor(private readonly bloodPressureService: BloodPressureService) {}
 
